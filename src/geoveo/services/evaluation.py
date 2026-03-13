@@ -1,7 +1,27 @@
+"""Evaluate rendered video output for quality metrics.
+
+Currently returns static stub scores.  Will be replaced with real metrics
+in a subsequent improvement step.
+"""
+
 from pathlib import Path
 
+from geoveo.models import PlannedJob
+
+
 class EvaluationService:
-    def evaluate(self, video_path: str) -> dict:
+    """Score a rendered video against the planned job context."""
+
+    def evaluate(self, video_path: str, planned: PlannedJob | None = None) -> dict:
+        """Return evaluation metrics for the rendered video.
+
+        Parameters
+        ----------
+        video_path : str
+            Path to the rendered video file.
+        planned : PlannedJob | None
+            The planned job context for route fidelity checks.
+        """
         exists = Path(video_path).exists()
         return {
             "video_exists": exists,

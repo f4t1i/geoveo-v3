@@ -30,11 +30,11 @@
 - [x] 4.4 Add proper async exception handling and HTTP error responses
 
 ## 5. Error Handling and Failure Recovery
-- [ ] 5.1 Create custom exception hierarchy: `GeoVeoError`, `ValidationError`, `ProviderError`, `BackendError`
-- [ ] 5.2 Add try/except blocks to `Orchestrator.run()` with partial artifact preservation on failure
-- [ ] 5.3 Implement `status: "partial"` in `RunResult` for runs that fail mid-pipeline
-- [ ] 5.4 Add FastAPI exception handlers that return structured JSON error responses
-- [ ] 5.5 Add CLI error handling with user-friendly error messages via Typer
+- [x] 5.1 Create custom exception hierarchy: `GeoVeoError`, `ValidationError`, `ProviderError`, `BackendError`
+- [x] 5.2 Add try/except blocks to `Orchestrator.run()` with partial artifact preservation on failure
+- [x] 5.3 Implement `status: "partial"` in `RunResult` for runs that fail mid-pipeline
+- [x] 5.4 Add FastAPI exception handlers that return structured JSON error responses
+- [x] 5.5 Add CLI error handling with user-friendly error messages via Typer
 
 ## 6. Expand Test Suite for All New Components
 - [ ] 6.1 Add tests for provider factories (routing, imagery, depth) with stub and unknown provider cases

@@ -8,7 +8,10 @@ geo-conditioned video segment.
 import json
 from pathlib import Path
 
+from geoveo.logging import get_logger
 from geoveo.models import RoutePoint
+
+log = get_logger(__name__)
 
 
 class ConditioningService:
@@ -59,4 +62,10 @@ class ConditioningService:
         }
         out_path = out_dir / "conditioning_bundle.json"
         out_path.write_text(json.dumps(bundle, indent=2), encoding="utf-8")
+        log.debug(
+            "conditioning.bundle_written",
+            route_id=route_id,
+            frames=len(route),
+            path=str(out_path),
+        )
         return str(out_path)

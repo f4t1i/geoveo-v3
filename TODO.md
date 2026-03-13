@@ -1,12 +1,12 @@
 # GeoVeo v3 — Improvement Roadmap
 
 ## 1. Provider Abstraction: Factory Pattern for Routing, Imagery, and Depth Services
-- [ ] 1.1 Create abstract base classes: `BaseRoutingProvider`, `BaseImageryProvider`, `BaseDepthProvider`
-- [ ] 1.2 Refactor `RoutingService` to use a provider factory that resolves from `settings.routing_provider`
-- [ ] 1.3 Refactor `ImageryService` to use a provider factory that resolves from `settings.imagery_provider`
-- [ ] 1.4 Create `DepthService` with provider factory resolving from `settings.depth_provider`
-- [ ] 1.5 Wire provider factories into the `Orchestrator` via config-driven injection
-- [ ] 1.6 Update `ConditioningService` to accept depth data from the new `DepthService`
+- [x] 1.1 Create abstract base classes: `BaseRoutingProvider`, `BaseImageryProvider`, `BaseDepthProvider`
+- [x] 1.2 Refactor `RoutingService` to use a provider factory that resolves from `settings.routing_provider`
+- [x] 1.3 Refactor `ImageryService` to use a provider factory that resolves from `settings.imagery_provider`
+- [x] 1.4 Create `DepthService` with provider factory resolving from `settings.depth_provider`
+- [x] 1.5 Wire provider factories into the `Orchestrator` via config-driven injection
+- [x] 1.6 Update `ConditioningService` to accept depth data from the new `DepthService`
 
 ## 2. Structured Logging Across the Entire Pipeline
 - [ ] 2.1 Add `structlog` dependency to `pyproject.toml`

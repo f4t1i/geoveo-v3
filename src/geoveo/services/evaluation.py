@@ -6,7 +6,10 @@ in a subsequent improvement step.
 
 from pathlib import Path
 
+from geoveo.logging import get_logger
 from geoveo.models import PlannedJob
+
+log = get_logger(__name__)
 
 
 class EvaluationService:
@@ -23,8 +26,10 @@ class EvaluationService:
             The planned job context for route fidelity checks.
         """
         exists = Path(video_path).exists()
-        return {
+        metrics = {
             "video_exists": exists,
             "temporal_consistency_score": 0.72 if exists else 0.0,
             "route_fidelity_score": 0.81 if exists else 0.0,
         }
+        log.debug("evaluation.complete", video_exists=exists, metrics=metrics)
+        return metrics

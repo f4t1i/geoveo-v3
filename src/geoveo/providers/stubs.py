@@ -7,8 +7,11 @@ full pipeline can be exercised end-to-end in any environment.
 
 from pathlib import Path
 
+from geoveo.logging import get_logger
 from geoveo.models import GeoVeoJob, RoutePoint
 from geoveo.providers.base import BaseRoutingProvider, BaseImageryProvider, BaseDepthProvider
+
+log = get_logger(__name__)
 
 
 class StubRoutingProvider(BaseRoutingProvider):
@@ -16,7 +19,7 @@ class StubRoutingProvider(BaseRoutingProvider):
 
     def plan_route(self, job: GeoVeoJob) -> list[RoutePoint]:
         base_lat, base_lng = 53.566, 9.992
-        return [
+        points = [
             RoutePoint(
                 lat=base_lat + i * 0.0005,
                 lng=base_lng + i * 0.0007,
@@ -24,6 +27,8 @@ class StubRoutingProvider(BaseRoutingProvider):
             )
             for i in range(8)
         ]
+        log.debug("stub.routing.plan_route", waypoints=len(points), location=job.location)
+        return points
 
 
 class StubImageryProvider(BaseImageryProvider):
@@ -40,6 +45,7 @@ class StubImageryProvider(BaseImageryProvider):
                 encoding="utf-8",
             )
             paths.append(str(path))
+        log.debug("stub.imagery.fetch_keyframes", frames=len(paths), out_dir=str(out_dir))
         return paths
 
 
@@ -57,4 +63,5 @@ class StubDepthProvider(BaseDepthProvider):
                 encoding="utf-8",
             )
             paths.append(str(path))
+        log.debug("stub.depth.estimate_depth", depth_maps=len(paths), out_dir=str(out_dir))
         return paths

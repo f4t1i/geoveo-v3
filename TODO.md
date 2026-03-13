@@ -37,12 +37,12 @@
 - [x] 5.5 Add CLI error handling with user-friendly error messages via Typer
 
 ## 6. Expand Test Suite for All New Components
-- [ ] 6.1 Add tests for provider factories (routing, imagery, depth) with stub and unknown provider cases
-- [ ] 6.2 Add tests for structured logging output (verify log entries are emitted)
-- [ ] 6.3 Add tests for evaluation metrics (route fidelity, temporal consistency, prompt alignment)
-- [ ] 6.4 Add tests for error handling (provider failures, invalid backends, partial runs)
-- [ ] 6.5 Add async API tests using `httpx.AsyncClient` with FastAPI `TestClient`
-- [ ] 6.6 Add integration test: full pipeline run with all stubs, verifying complete artifact layout
+- [x] 6.1 Add tests for provider factories (routing, imagery, depth) with stub and unknown provider cases
+- [x] 6.2 Add tests for structured logging output (verify log entries are emitted)
+- [x] 6.3 Add tests for evaluation metrics (route fidelity, temporal consistency, prompt alignment)
+- [x] 6.4 Add tests for error handling (provider failures, invalid backends, partial runs)
+- [x] 6.5 Add async API tests using `httpx.AsyncClient` with FastAPI `TestClient`
+- [x] 6.6 Add integration test: full pipeline run with all stubs, verifying complete artifact layout
 
 ## 7. Update README with All Changes
 - [ ] 7.1 Document provider abstraction and how to add custom providers

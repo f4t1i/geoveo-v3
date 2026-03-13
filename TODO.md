@@ -17,11 +17,11 @@
 - [x] 2.6 Add request logging middleware to the FastAPI application
 
 ## 3. Real Evaluation Metrics Instead of Static Values
-- [ ] 3.1 Implement file-based evaluation: video file size, frame count estimation, artifact completeness check
-- [ ] 3.2 Implement route fidelity metric: compare planned waypoints against conditioning bundle waypoints
-- [ ] 3.3 Implement temporal consistency metric: analyze conditioning bundle frame sequence for heading continuity
-- [ ] 3.4 Implement prompt alignment metric: keyword extraction from prompt matched against job metadata
-- [ ] 3.5 Return a structured `EvaluationReport` model instead of a plain dict
+- [x] 3.1 Implement file-based evaluation: video file size, frame count estimation, artifact completeness check
+- [x] 3.2 Implement route fidelity metric: compare planned waypoints against conditioning bundle waypoints
+- [x] 3.3 Implement temporal consistency metric: analyze conditioning bundle frame sequence for heading continuity
+- [x] 3.4 Implement prompt alignment metric: keyword extraction from prompt matched against job metadata
+- [x] 3.5 Return a structured `EvaluationReport` model instead of a plain dict
 
 ## 4. Async Support for FastAPI Endpoints
 - [ ] 4.1 Convert all FastAPI route handlers to `async def`

@@ -24,10 +24,10 @@
 - [x] 3.5 Return a structured `EvaluationReport` model instead of a plain dict
 
 ## 4. Async Support for FastAPI Endpoints
-- [ ] 4.1 Convert all FastAPI route handlers to `async def`
-- [ ] 4.2 Wrap synchronous orchestrator calls with `asyncio.to_thread()` for non-blocking execution
-- [ ] 4.3 Add a `/jobs/status/{job_id}` endpoint stub for future async job tracking
-- [ ] 4.4 Add proper async exception handling and HTTP error responses
+- [x] 4.1 Convert all FastAPI route handlers to `async def`
+- [x] 4.2 Wrap synchronous orchestrator calls with `asyncio.to_thread()` for non-blocking execution
+- [x] 4.3 Add a `/jobs/status/{job_id}` endpoint stub for future async job tracking
+- [x] 4.4 Add proper async exception handling and HTTP error responses
 
 ## 5. Error Handling and Failure Recovery
 - [ ] 5.1 Create custom exception hierarchy: `GeoVeoError`, `ValidationError`, `ProviderError`, `BackendError`

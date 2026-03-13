@@ -22,6 +22,6 @@ class PlannedJob(BaseModel):
 
 class RunResult(BaseModel):
     job_id: str
-    status: Literal["done", "failed"]
+    status: Literal["done", "partial", "failed"]
     output_video: str
     metadata: dict[str, Any] = Field(default_factory=dict)

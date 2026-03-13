@@ -9,12 +9,12 @@
 - [x] 1.6 Update `ConditioningService` to accept depth data from the new `DepthService`
 
 ## 2. Structured Logging Across the Entire Pipeline
-- [ ] 2.1 Add `structlog` dependency to `pyproject.toml`
-- [ ] 2.2 Create `src/geoveo/logging.py` with a centralized logger configuration bound to `settings.geoveo_log_level`
-- [ ] 2.3 Add structured log calls to `Orchestrator.plan()` and `Orchestrator.run()` (start, step completion, timing)
-- [ ] 2.4 Add structured log calls to all services (routing, imagery, conditioning, depth, evaluation)
-- [ ] 2.5 Add structured log calls to all video backends (render start, render complete, errors)
-- [ ] 2.6 Add request logging middleware to the FastAPI application
+- [x] 2.1 Add `structlog` dependency to `pyproject.toml`
+- [x] 2.2 Create `src/geoveo/logging.py` with a centralized logger configuration bound to `settings.geoveo_log_level`
+- [x] 2.3 Add structured log calls to `Orchestrator.plan()` and `Orchestrator.run()` (start, step completion, timing)
+- [x] 2.4 Add structured log calls to all services (routing, imagery, conditioning, depth, evaluation)
+- [x] 2.5 Add structured log calls to all video backends (render start, render complete, errors)
+- [x] 2.6 Add request logging middleware to the FastAPI application
 
 ## 3. Real Evaluation Metrics Instead of Static Values
 - [ ] 3.1 Implement file-based evaluation: video file size, frame count estimation, artifact completeness check

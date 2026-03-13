@@ -45,9 +45,9 @@
 - [x] 6.6 Add integration test: full pipeline run with all stubs, verifying complete artifact layout
 
 ## 7. Update README with All Changes
-- [ ] 7.1 Document provider abstraction and how to add custom providers
-- [ ] 7.2 Document logging configuration and log output format
-- [ ] 7.3 Document evaluation metrics and their meaning
-- [ ] 7.4 Document async API behavior and job status endpoint
-- [ ] 7.5 Document error handling, custom exceptions, and failure modes
-- [ ] 7.6 Update tech stack table with new dependencies
+- [x] 7.1 Document provider abstraction and how to add custom providers
+- [x] 7.2 Document logging configuration and log output format
+- [x] 7.3 Document evaluation metrics and their meaning
+- [x] 7.4 Document async API behavior and job status endpoint
+- [x] 7.5 Document error handling, custom exceptions, and failure modes
+- [x] 7.6 Update tech stack table with new dependencies

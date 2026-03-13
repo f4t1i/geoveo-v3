@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "generate_video output",
+  "type": "object",
+  "properties": {
+    "job_id": {
+      "type": "string"
+    },
+    "backend": {
+      "type": "string"
+    },
+    "video_path": {
+      "type": "string"
+    },
+    "preview_gif_path": {
+      "type": "string"
+    },
+    "frames_used": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "queued",
+        "running",
+        "done",
+        "failed"
+      ]
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "job_id",
+    "backend",
+    "status"
+  ],
+  "additionalProperties": false
+}

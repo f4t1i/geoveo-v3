@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GeoVeoJob",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "prompt",
+    "location"
+  ],
+  "properties": {
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "drive",
+        "walk",
+        "bike"
+      ]
+    },
+    "sampling_meters": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 200
+    },
+    "imagery_source": {
+      "type": "string",
+      "enum": [
+        "mapillary",
+        "streetview",
+        "stub"
+      ]
+    },
+    "video_backend": {
+      "type": "string",
+      "enum": [
+        "cogvideox",
+        "animatediff",
+        "veo",
+        "stub"
+      ]
+    }
+  }
+}

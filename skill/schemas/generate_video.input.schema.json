@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "generate_video input",
+  "type": "object",
+  "properties": {
+    "backend": {
+      "type": "string",
+      "enum": [
+        "cogvideox_i2v",
+        "animatediff_depth",
+        "veo"
+      ],
+      "default": "cogvideox_i2v"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "conditioning_bundle": {
+      "type": "object",
+      "properties": {
+        "route_id": {
+          "type": "string"
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "index": {
+                "type": "integer"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lng": {
+                "type": "number"
+              },
+              "heading_deg": {
+                "type": "number"
+              },
+              "image_path": {
+                "type": "string"
+              },
+              "depth_path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "index",
+              "image_path"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "camera_path": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "frame_index": {
+                "type": "integer"
+              },
+              "lat": {
+                "type": "number"
+              },
+              "lng": {
+                "type": "number"
+              },
+              "heading_deg": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "frame_index"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "frames"
+      ],
+      "additionalProperties": false
+    },
+    "output_fps": {
+      "type": "integer",
+      "default": 24
+    },
+    "duration_seconds": {
+      "type": "number",
+      "default": 5
+    }
+  },
+  "required": [
+    "backend",
+    "prompt",
+    "conditioning_bundle"
+  ],
+  "additionalProperties": false
+}

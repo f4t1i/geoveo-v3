@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GeoVeoJob",
+  "type": "object",
+  "required": [
+    "prompt",
+    "location",
+    "mode",
+    "sampling_meters",
+    "imagery_source",
+    "video_backend"
+  ],
+  "properties": {
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "route_hint": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "walk",
+        "drive",
+        "bike",
+        "flythrough"
+      ]
+    },
+    "sampling_meters": {
+      "type": "number",
+      "minimum": 1
+    },
+    "imagery_source": {
+      "type": "string",
+      "enum": [
+        "mapillary",
+        "google_street_view",
+        "mixed"
+      ]
+    },
+    "video_backend": {
+      "type": "string"
+    },
+    "target_duration_seconds": {
+      "type": "number",
+      "minimum": 1
+    },
+    "fps": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "weather_style": {
+      "type": "string"
+    },
+    "time_of_day": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

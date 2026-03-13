@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ConditioningBundle",
+  "type": "object",
+  "required": [
+    "route_id",
+    "frames"
+  ],
+  "properties": {
+    "route_id": {
+      "type": "string"
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "index",
+          "lat",
+          "lng",
+          "heading_deg",
+          "image_path",
+          "depth_path"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "heading_deg": {
+            "type": "number"
+          },
+          "image_path": {
+            "type": "string"
+          },
+          "depth_path": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "prompt": "Fahre an der Alster entlang, sonniger Tag, cinematic, realistische Architektur, ruhige Kamerafahrt",
+  "location": "Hamburg Alster",
+  "route_hint": "east shore scenic route",
+  "mode": "drive",
+  "sampling_meters": 15,
+  "imagery_source": "mapillary",
+  "video_backend": "cogvideox_i2v",
+  "target_duration_seconds": 8,
+  "fps": 24,
+  "weather_style": "sunny",
+  "time_of_day": "afternoon",
+  "notes": "Proof of concept with reproducible keyframes"
+}

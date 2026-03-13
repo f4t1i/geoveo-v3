@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "get_street_level_image output",
+  "type": "object",
+  "properties": {
+    "image_id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "image_path": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "heading_deg": {
+      "type": "number"
+    },
+    "pitch_deg": {
+      "type": "number"
+    },
+    "fov": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ok",
+        "fallback",
+        "not_found",
+        "error"
+      ]
+    }
+  },
+  "required": [
+    "image_id",
+    "source",
+    "status"
+  ],
+  "additionalProperties": false
+}

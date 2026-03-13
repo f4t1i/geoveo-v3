@@ -1,0 +1,8 @@
+{
+  "prompt": "Fahre an der Alster entlang, sonniger Tag, cinematic",
+  "location": "Hamburg Alster",
+  "mode": "drive",
+  "sampling_meters": 15,
+  "imagery_source": "mapillary",
+  "video_backend": "cogvideox_i2v"
+}

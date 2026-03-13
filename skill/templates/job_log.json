@@ -1,0 +1,39 @@
+{
+  "job_id": "job_001",
+  "status": "planned",
+  "steps": [
+    {
+      "step": "PLAN_ROUTE",
+      "status": "pending"
+    },
+    {
+      "step": "SAMPLE_VIEWPOINTS",
+      "status": "pending"
+    },
+    {
+      "step": "FETCH_IMAGERY",
+      "status": "pending"
+    },
+    {
+      "step": "BUILD_CONDITIONING",
+      "status": "pending"
+    },
+    {
+      "step": "GENERATE_VIDEO",
+      "status": "pending"
+    },
+    {
+      "step": "EVALUATE_OUTPUT",
+      "status": "pending"
+    },
+    {
+      "step": "EXPORT_RESULT",
+      "status": "pending"
+    }
+  ],
+  "artifacts": {
+    "route_json": "",
+    "conditioning_bundle": "",
+    "output_video": ""
+  }
+}

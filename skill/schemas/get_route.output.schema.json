@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "get_route output",
+  "type": "object",
+  "properties": {
+    "route_id": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "string"
+    },
+    "polyline": {
+      "type": "string"
+    },
+    "distance_m": {
+      "type": "number"
+    },
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer"
+          },
+          "lat": {
+            "type": "number"
+          },
+          "lng": {
+            "type": "number"
+          },
+          "heading_deg": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "index",
+          "lat",
+          "lng"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "route_id",
+    "points"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "get_street_level_image input",
+  "type": "object",
+  "properties": {
+    "lat": {
+      "type": "number"
+    },
+    "lng": {
+      "type": "number"
+    },
+    "heading_deg": {
+      "type": "number",
+      "default": 0
+    },
+    "pitch_deg": {
+      "type": "number",
+      "default": 0
+    },
+    "fov": {
+      "type": "number",
+      "default": 90
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "mapillary",
+        "google_street_view"
+      ],
+      "default": "mapillary"
+    },
+    "size": {
+      "type": "string",
+      "default": "1024x576"
+    },
+    "cache_key": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "lat",
+    "lng"
+  ],
+  "additionalProperties": false
+}

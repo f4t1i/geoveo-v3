@@ -1,0 +1,13 @@
+{
+  "job_id": "job_001",
+  "route_id": "alster_demo_001",
+  "status": "done",
+  "imagery_source": "mapillary",
+  "video_backend": "cogvideox_i2v",
+  "artifacts": {
+    "route": "artifacts/routes/alster_demo_001.json",
+    "conditioning_bundle": "artifacts/conditioning/alster_demo_001.json",
+    "video": "artifacts/video/job_001.mp4"
+  },
+  "warnings": []
+}
